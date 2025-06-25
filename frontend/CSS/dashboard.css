@@ -1,0 +1,27 @@
+/* Estilos Específicos do Dashboard */
+
+.dashboard-card .card-title {
+    font-weight: 700;
+}
+
+.dashboard-card .icon-bg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-card .icon-bg i {
+    font-size: 1.5rem;
+}
+
+/* Cores "soft" para os fundos dos ícones */
+.bg-primary-soft { background-color: var(--primary-soft); }
+.bg-warning-soft { background-color: var(--warning-soft); }
+
+/* Ajuste de altura dos gráficos para manter consistência */
+#graficoServicos, #graficoTiposServico {
+    max-height: 320px;
+}

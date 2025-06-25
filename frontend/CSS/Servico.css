@@ -1,0 +1,52 @@
+/* Oculta a seção de agendamento por padrão */
+#secaoAgendarServico {
+    display: none;
+}
+
+/* Estiliza os itens da lista de serviços agendados */
+#servicosAgendadosUL li {
+    border: 1px solid #ddd; /* Borda sutil */
+    padding: 10px 14px; /* Espaçamento interno */
+    border-radius: 6px; /* Cantos levemente arredondados */
+    margin-bottom: 8px; /* Espaçamento entre itens */
+    background-color: #f8f9fa; /* Cor de fundo clara (Bootstrap) */
+    display: flex; /* Layout flexível */
+    justify-content: space-between; /* Distribuição entre texto e botão */
+    align-items: center; /* Alinhamento vertical central */
+}
+
+/* Ajusta o estilo do botão de remoção nos itens da lista */
+#servicosAgendadosUL .btn-danger {
+    margin-left: 10px; /* Espaço entre o texto e o botão */
+    padding: 4px 10px; /* Tamanho compacto do botão */
+    font-size: 0.875rem; /* Fonte menor (14px) */
+    border-radius: 4px; /* Cantos arredondados suaves */
+}
+
+/* Estiliza a área de informações do cliente dentro da seção de agendamento */
+#secaoAgendarServico .bg-light {
+    background-color: var(--bg-dark) !important; /* Usa a variável global para consistência visual */
+    border-color: #ccc !important; /* Cor da borda neutra */
+    padding: 1rem; /* Espaçamento interno padrão */
+    border-radius: 8px; /* Borda suavemente arredondada */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+    color: #000000; /* Cor do texto */
+}
+
+/* Remove o espaço inferior do último parágrafo nas informações do cliente */
+#clienteInfo p:last-child {
+    margin-bottom: 0;
+}
+
+/* Estiliza o campo de busca da seção de clientes */
+#secaoBuscarCliente .form-control {
+    border-radius: 6px; /* Borda arredondada */
+    padding: 8px 12px; /* Espaçamento interno ajustado */
+    font-size: 1rem; /* Tamanho de fonte padrão */
+}
+
+/* Ajusta o posicionamento lateral do campo de busca */
+#divBuscaCliente {
+    margin-left: 40px;
+    margin-right: 0;
+}
