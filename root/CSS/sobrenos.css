@@ -1,0 +1,295 @@
+/* Definições gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #2C786C, #4CB8A5);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(44, 120, 108, 0.3);
+    position: relative;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4CB8A5, #2C786C, #4CB8A5);
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* Container principal */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Seção de descrição */
+.descricao {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.descricao::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4CB8A5, #2C786C);
+}
+
+.descricao h2 {
+    color: #2C786C;
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.descricao h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #4CB8A5;
+    border-radius: 2px;
+}
+
+.descricao p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+    color: #555;
+}
+
+.descricao p:last-child {
+    margin-bottom: 0;
+}
+
+/* Seção CTA */
+.cta {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #2C786C, #4CB8A5);
+}
+
+.btn-login {
+    display: inline-block;
+    background: linear-gradient(135deg, #2C786C, #4CB8A5);
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(44, 120, 108, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-login::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-login:hover::before {
+    left: 100%;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(44, 120, 108, 0.4);
+    background: linear-gradient(135deg, #1e5449, #3a9688);
+}
+
+.btn-login:active {
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    background: #2C786C;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: auto;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4CB8A5, #2C786C, #4CB8A5);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+    opacity: 0.9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: 30px 15px;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .logo {
+        width: 100px;
+    }
+    
+    main {
+        padding: 40px 15px;
+        gap: 30px;
+    }
+    
+    .descricao, .cta {
+        padding: 30px 25px;
+    }
+    
+    .descricao h2 {
+        font-size: 1.8em;
+    }
+    
+    .descricao p {
+        font-size: 1em;
+        text-align: left;
+    }
+    
+    .btn-login {
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6em;
+        line-height: 1.2;
+    }
+    
+    .logo {
+        width: 80px;
+    }
+    
+    main {
+        padding: 30px 10px;
+    }
+    
+    .descricao, .cta {
+        padding: 25px 20px;
+    }
+    
+    .descricao h2 {
+        font-size: 1.5em;
+    }
+    
+    .btn-login {
+        padding: 10px 25px;
+        font-size: 0.9em;
+    }
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.descricao, .cta {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.cta {
+    animation-delay: 0.2s;
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
